@@ -3,7 +3,7 @@ name: Deploy Product Matchup to Cloudflare Pages
 on:
   push:
     branches: [main, master]
-  workflow_dispatch:  # <-- This adds the manual "Run workflow" button
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -21,6 +21,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: product-matchup
+          projectName: media-seo
           directory: .
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
