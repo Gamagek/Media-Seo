@@ -1,4 +1,4 @@
-name: Deploy Product Matchup to Cloudflare Pages
+name: Deploy to Cloudflare Pages
 
 on:
   push:
@@ -21,6 +21,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: media-seo
+          projectName: product-matchup
           directory: .
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
